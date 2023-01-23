@@ -5,20 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Assignment-3/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="dec"><div id="date">10</div>
-        <div class="dec2"><span id="friday">Friday</span>
-            <span id="month">December, 2021</span>
+    <div class="dec">
+        <div id="date">10
+            <div class="dec2"><span id="friday">Friday</span>
+                <span id="month">December, 2021</span>
+            </div>
         </div>
-        <select name="cityDropdown"  onchange="selectCity()" id="city">
-        </select>
-        <span id="temperature" class="tmp"></span>
+        <div class="bar">
+            <div class="display">
+                <p>Select Place</p>
+                <select name="cityDropdown"  onchange="selectCity()" class="city" id="city">
+                </select>
+            </div>
+            <div class="display"><p>How Many Days?</p>
+                <select name="howManyDays" class="city" id="days">
+                    <option value="one">One Week</option>
+                </select></div>
+            
+            <div class="display">
+                <p id="selectDate">Select Date</p>
+                <input type="date">
+            </div>
+            <div class="display">
+                <img src="/Assignment-3/html/360_F_239640633_yLPC1XJLLrPFzlWQYRIIB7Gs9fII2mpq.jpg" height="20px" width="20px" alt="filter">
+            </div>
+            <div class="display">
+                <button><i class="fa fa-search"></i> Go!</button>
+            </div>
+        </div>
+        <div class="temp" id="tempDiv">
+            <img id="img">
+            <span id="temperature" class="tmp"></span>
+            <div class="insideTmp">
+                <span id="cityName"></span>
+                <span id="in" style="color: rgb(179, 179, 179);"></span>
+            </div>
+        </div>
     </div>
+
+    <br><br><br>
+        
     
+
+
     <br><br>
-    <div class="grid-container" id="trip"></div>
+    <div class="grid-container" id="trip">
+    </div>
     <script src="/Assignment-3/js/script.js"></script>
 </body>
 </html>
