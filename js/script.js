@@ -16,7 +16,7 @@ cn.then((response)=>response.json())
 
 function selectCity(){
     var selected = document.getElementById('city').value;
-    let wthUrl = 'http://api.weatherapi.com/v1/current.json?key=b6fc5e1797d24830baf44824232301&q=';
+    let wthUrl = 'https://api.weatherapi.com/v1/current.json?key=b6fc5e1797d24830baf44824232301&q=';
     let urlCity = selected;
     let endofUrl = '&aqi=no';
     const wth = fetch(wthUrl+urlCity+endofUrl);
