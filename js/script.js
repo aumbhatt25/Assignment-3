@@ -46,7 +46,6 @@ function selectCity(){
 const grid = fetch('https://raw.githubusercontent.com/Dipen-Dedania/static-data/main/make-your-trip-package.json')
 grid.then((response)=>response.json())
 .then((data)=>{
-    console.log(data);
     const gridDiv = document.getElementById('trip');
     for(let i=0;i<data.length;i++){
 
@@ -62,20 +61,22 @@ grid.then((response)=>response.json())
         <div class="detail">
             <p class="pDiv" style="font-size: 20px;">${cityName}</p>
             <p class="pDiv" style="font-size: 14px;">${tourDate}</p>
-            <p class="pDiv" style="font-size: 12px;">${category}</p>
+            <p class="pDiv" style="font-size: 12px; color: rgb(179, 179, 179)">${category}</p>
         </div>
         <p>&#xf097;</p>
         </div>
         <br>
-        <p>Average Temperature</p>
-        <p>+ ${tmpr}&#176;C</p>
+        <div style="margin-bottom: 4px;">
+        <span style="font-size: 14px;">Ave</span><span style="font-size: 14px;">rage Temperature</span>
+        </div>
+        <p>+ ${tmpr}&#176;C <iconify-icon style="color: rgb(255, 196, 0); padding-left: 3px;" icon="wi:day-sunny"></iconify-icon></p>
         <div>
             <img src="${imageUrl}" height="200fr" width="100%" alt="">
         </div>
         
         <div class="priceExplore">
             <div class="totalprice">
-                <p>Total Price:</p>
+                <p style="font-size: 14px; margin-bottom: 4px; color: rgb(179, 179, 179)">Total Price:</p>
                 <p>${price}</p>
             </div>
 

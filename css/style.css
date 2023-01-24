@@ -151,3 +151,37 @@ button:hover{
     display: flex;
     flex-direction: column;
 }
+.priceExplore button{
+    border-radius: 10px;
+    border: 1px solid rgb(88, 88, 88);
+}
+.contain div span:first-child{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1000px) {
+    .bar{
+        display: flex;
+        flex-direction: column;
+    }
+    .display{
+        border-style: none;
+        border-bottom: 2px solid rgb(163, 163, 163);
+    }
+    .display:last-of-type{
+        border-bottom: none;
+    }
+}
+
+@media screen and (max-width: 1380px) {
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 918px) {
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
